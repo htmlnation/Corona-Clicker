@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #e6b122;
+	color: #ffffff;
+	flex-direction: column;
+	font-family: 'Press Start 2P';
+	height: 100vh;
+	margin: 0;
+	overflow: hidden;
+	text-align: center;
+	touch-action: none;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10+ and Edge */
+	user-select: none; /* Standard syntax */
+}
+
+a {
+	color: #ffffff;
+}
+
+h1 {
+	line-height: 1.4;
+}
+
+.screen {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	transition: margin 0.75s linear;
+	height: 100vh;
+	width: 100vw;
+}
+
+.screen.up {
+	margin-top: -100vh;
+}
+
+.btn {
+	border: 0;
+	background-color: #ffffff;
+	color: #e6b122;
+	cursor: pointer;
+	font-family: 'Press Start 2P';
+	padding: 15px 20px;
+}
+
+.btn:hover {
+	opacity: 0.9;
+}
+
+.btn:active {
+	opacity: 0.7;
+}
+
+.strain_list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+.strain_list li {
+	margin: 10px;
+}
+
+.choose_strain_btn {
+	background: transparent;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: 'Press Start 2P';
+	width: 150px;
+	height: 150px;
+}
+
+.choose_strain_btn:hover {
+	background-color: #ffffff;
+	color: #e6b122;
+}
+
+.choose_strain_btn:active {
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+.choose_strain_btn img {
+	object-fit: contain;
+	width: 100px;
+	height: 100px;
+}
+
+.game_container {
+	position: relative;
+}
+
+#time, #score {
+	top: 20px;
+	position: absolute;
+}
+
+@media screen and (max-width: 480px) {
+	#time, #score {
+		font-size: 12px;
+	}
+}
+
+#time {
+	left: 20px;
+}
+
+#score {
+	right: 20px;
+}
+
+#final_message {
+	line-height: 1.6;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transition: transform 0.4s ease-in;
+	transform: translate(-50%, -150%);
+	opacity: 0;
+	text-align: center;
+	width: 100%;
+}
+
+#final_message.visible {
+	transform: translate(-50%, 100%);
+	opacity: 1;
+}
+
+.virus {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	transform: translate(-50%, -50%) scale(1);
+	cursor: pointer;
+	width: 100px;
+	height: 100px;
+	transition: transform 0.3s ease-out;
+}
+
+.virus.catched {
+	transform: translate(-50%, -50%) scale(0);
+}
+
+.virus img {
+	object-fit: contain;
+	width: 100px;
+	height: 100px;
+}

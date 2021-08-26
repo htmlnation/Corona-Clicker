@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+        <title>COVID-19 Game</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+
+    <body>
+        <div class="screen">
+            <h1>The Corona Virus Game</h1>
+            <button id="start_btn" class="btn">Play Game</button>
+            <div>
+                <h5>Made by <a href="https://instagram.com/kashan__n" target="_blank">@kashan__n</a></h5>
+            </div>
+        </div>
+        <div class="screen">
+            <h1>What is your "favorite" strain?</h1>
+            <ul class="strain_list">
+                <li>
+                    <button class="choose_strain_btn">
+                        <p>S-type</p>
+                        <img src="http://pngimg.com/uploads/coronavirus/coronavirus_PNG17.png" alt="s-type-coronavirus"/>
+                    </button>
+                </li>
+                <li>
+                    <button class="choose_strain_btn">
+                        <p>L-type</p>
+                        <img src="http://pngimg.com/uploads/coronavirus/coronavirus_PNG46.png" alt="l-type-coronavirus"/>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="screen game_container">
+            <h3 id="time">Time: 00:00</h3>
+            <h3 id="score">Score: 0</h3>
+            <h4 id="final_message">
+                Are you infected yet? <br />
+                If not, keep it that way and <br />
+                stay home, self-isolating... <br />
+                <br />
+                You are playing: <br />
+                The Corona Virus Game! <br />
+            </h4>        
+        </div>
+        <audio id="cardib">
+            <source src="Cardi B Coronavirus.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="coronatime">
+            <source src="It's Corona Time.mp3" type="audio/mpeg">
+        </audio>
+        <a href="https://kashannadeem.com" title="Powered by Kashan Nadeem"></a>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
